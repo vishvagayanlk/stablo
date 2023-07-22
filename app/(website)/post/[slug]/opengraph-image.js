@@ -19,8 +19,8 @@ export default async function handler({ params }) {
   const post = await getPostBySlug(params.slug);
 
   // Load the desired font
-  const interBold = await loadFont("Inter-Bold.otf");
-  const interRegular = await loadFont("Inter-Regular.otf");
+  const interBold = loadFont("Inter-Bold.otf");
+  const interRegular = loadFont("Inter-Regular.otf");
 
   return new ImageResponse(<OgImage post={post} />, {
     width: 1200,
